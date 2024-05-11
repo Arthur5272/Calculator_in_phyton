@@ -30,9 +30,13 @@ class Calculadora:
                     button.bind("<Button-1>", self.clear)
                     button.config(bg="#CF0B0B", foreground="#fff")
 
-                if button_text in "0123456789.+-*/()^":
+                if button_text in ".+-*/()^":
                     button.bind("<Button-1>", self.add_text_to_display)
                     button.config(bg="#424242", foreground="#fff")
+
+                if button_text in "0123456789":
+                    button.bind("<Button-1>", self.add_text_to_display)
+                    button.config(bg="#3E314F", foreground="#fff")
 
                 if button_text == "=":
                     button.bind("<Button-1>", self.calculate)
